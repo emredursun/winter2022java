@@ -35,13 +35,13 @@ public class Fp01 {
         printCubeOfDistinctElements(l);
         System.out.println();
         getMaxElement01(l);
+        System.out.println();
         getMaxElement02(l);
-        getMinGreaterThanSeven01(l);
-        getMinGreaterThanSeven02(l);
-        getMinGreaterThanSeven03(l);
-        getHalfOfDistinctElementsInReversedOrder(l);
-        sumOfSquaresOfDistinctEvenElements(l);
-        productOfCubesOfDistinctEvenElements(l);
+        System.out.println();
+        maxOddLessThanSeventeen01(l);
+        System.out.println();
+        maxOddLessThanSeventeen02(l);
+        System.out.println();
     }
     //1)Create a method to print the list elements on the console in the same line with a space
     //  between two consecutive elements.(Structured)
@@ -53,28 +53,28 @@ public class Fp01 {
     //1)Create a method to print the list elements on the console in the same line with a space
     //  between two consecutive elements.(functional)
     public static void printElementsFunctional(List<Integer> list){
-        list.stream().forEach( t -> System.out.print(t + " "));
+        list.stream().forEach(t -> System.out.print(t + " "));
     }
     //2)Create a method to print the even list elements on the console in the same line with a space
     //  between two consecutive elements.(Structured)
     //2)Create a method to print the even list elements on the console in the same line with a space
     //  between two consecutive elements.(Structured)
     public static void printEvenElementsStructured(List<Integer> list){
-        for(Integer w: list){
-            if(w % 2 == 0 ){
-                System.out.print(w+" ");
+        for (Integer w : list) {
+            if(w % 2 == 0){
+                System.out.print(w + " ");
             }
         }
     }
     //2)Create a method to print the even list elements on the console in the same line with a space
     //  between two consecutive elements.(Functional)
     public static void printEvenElementsFunctional(List<Integer> list){
-        list.stream().filter( t -> t % 2 ==0).forEach(t -> System.out.print(t + " "));
+        list.stream().filter(t -> t % 2 == 0).forEach(t -> System.out.print(t + " "));
     }
     //3)Create a method to print the square of odd list elements on the console in the same line with a
     //  space between two consecutive elements.(Functional)
     public static void printSquareOfOddElements(List<Integer> list){
-        list.stream().filter(t -> t % 2 != 0).map(t -> t * t ).forEach(t -> System.out.print(t  + " "));
+        list.stream().filter(t-> t%2 !=0).map(t -> t*t).forEach(t -> System.out.print(t + " "));
     }// [8 9 131 10 9 10 2 8 15]
     //4)Create a method to print the cube of distinct odd list elements on the console in the same line
     //  with a space between two consecutive elements.
@@ -82,18 +82,18 @@ public class Fp01 {
     //elements should be odd
     //elements printed as cube
     public static void printCubeOfDistinctElements(List<Integer> list){
-        list.stream().distinct().filter(t -> t %2 !=0).map(t -> t * t * t).forEach(t-> System.out.print(t +" "));
+        list.stream().distinct().filter(t -> t%2 != 0).map(t -> t*t*t).forEach(t -> System.out.print(t + " "));
     }
     //7)Create a method to find the maximum value from the list elements
     //1. way
     public static void getMaxElement01(List<Integer> list){
         Integer maxValue = list.stream().distinct().reduce(Integer.MIN_VALUE,(t,u) -> t > u ? t : u);
-        System.out.println(maxValue);
+        System.out.print(maxValue);
     }
     //2. way
     public static void getMaxElement02(List<Integer> list){
         Integer maxValue = list.stream().distinct().sorted().reduce(Integer.MIN_VALUE, (t,u) -> u);
-        System.out.println(maxValue);
+        System.out.print(maxValue);
     }
     //9)Create a method to find the minimum value which is greater than 7 and even from the list
     //more than 7, even, min value
@@ -146,5 +146,27 @@ public class Fp01 {
     public static void productOfCubesOfDistinctEvenElements(List<Integer> list){
         Integer product = list.stream().distinct().filter(t -> t % 2 == 0).map(t -> t * t * t).reduce(1, (t,u) -> t * u);
         System.out.println(product);
+    }
+    //7)Create a method to find the maximum value which is less than 17 and odd from the list
+    //1.Way
+    public  static void maxOddLessThanSeventeen01(List<Integer> list){
+        Integer maxOddLessThanSeventeen = list.stream().
+                distinct().
+                filter(t -> t < 17).
+                filter(t -> t%2 != 0).
+                reduce(Integer.MIN_VALUE,(t,u) -> u);
+
+        System.out.print(maxOddLessThanSeventeen);
+    }
+    // 2.Way
+    public  static void maxOddLessThanSeventeen02(List<Integer> list){
+        Integer maxOddLessThanSeventeen = list.stream().
+                distinct().
+                filter(t -> t < 17).
+                filter(t -> t%2 != 0).
+                sorted(Comparator.reverseOrder()).
+                findFirst().get();
+
+        System.out.print(maxOddLessThanSeventeen);
     }
 }
