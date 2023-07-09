@@ -21,12 +21,13 @@ public class Runner03 {
         Person person1 = new Person(scan.nextLine(), scan.nextLine());
         System.out.println(person1.name);
         System.out.println(person1.lastname);
-        System.out.println(email(person1));
+        System.out.println(person1.getEmail());
+//        System.out.println(generateEmail(person1));
 
     }
 
-    public static String email(Person person){
-        String email = (person.name + person.lastname + "@gmail.com").replaceAll(" ","").toLowerCase();
-        return email;
-    }
+//    public static String generateEmail(Person person){
+//        String email = (person.name + person.lastname + "@gmail.com").replaceAll(" ","").toLowerCase();
+//        return email;
+//    }
 }

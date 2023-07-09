@@ -26,8 +26,8 @@ public class Runner02 {
         lastname.add(scan.nextLine());
         lastname.add(scan.nextLine());
 
-        System.out.println(firstname);
-        System.out.println(lastname);
+        System.out.println("The firstname list: " + firstname);
+        System.out.println("The lastname list: " + lastname);
 
         System.out.println("The email list: " + getEmailList(firstname,lastname));
 
