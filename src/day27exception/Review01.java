@@ -8,7 +8,7 @@ public class Review01 {
         getCharacterFromAStringByIndex(s1, 6); // StringIndexOutOfBoundsException ==> String index out of range: 6
 
         divideTheLengths(s1, 1, 7, 3); // An issue occurred in character selection ==> begin 1, end 7, length 6
-        divideTheLengths(s1, 1, 5, 1); // An issue occurred in division ==> / by zero
+        divideTheLengths(s1, 1, 5, 1); // An issue occurred in division ==> / bypull zero
 
     }
 
