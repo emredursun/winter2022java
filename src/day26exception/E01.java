@@ -6,6 +6,18 @@ package day26exception;
             2)There are 2 ways to work with Exceptions
               a)Exception Handling: try-catch blocks
               b)Throw Exception
+            3)The most common exceptions in Java programming are:
+                - ArithmeticException
+                - ArrayIndexOutOfBoundsException
+                - NullPointerException
+                - NumberFormatException
+                - ClassCastException
+                - IllegalArgumentException
+                - IOException
+                - FileNotFoundException
+                - InterruptedException
+
+                These exceptions can be handled using try-catch blocks, multiple catch blocks, and the throw keyword, among other exception handling mechanisms.
          */
 
 public class E01 {
