@@ -7,18 +7,22 @@ package day26exception;
               a)Exception Handling: try-catch blocks
               b)Throw Exception
             3)The most common exceptions in Java programming are:
-                - ArithmeticException
-                - ArrayIndexOutOfBoundsException
-                - NullPointerException
-                - NumberFormatException
-                - ClassCastException
-                - IllegalArgumentException
-                - IOException
-                - FileNotFoundException
-                - InterruptedException
+                ### "Run Time Exceptions" (Unchecked Exceptions)
+                - `ArithmeticException`
+                - `ArrayIndexOutOfBoundsException`
+                - `NullPointerException`
+                - `NumberFormatException`
+                - `StringIndexOutOfBoundsException`
+                - `ClassCastException`
 
-                These exceptions can be handled using try-catch blocks, multiple catch blocks, and the throw keyword, among other exception handling mechanisms.
-         */
+                ### "Compile Time Exceptions" (Checked Exception)
+                - `IOException`
+                - `FileNotFoundException`
+                - `IllegalArgumentException`
+                - `InterruptedException`
+
+            These exceptions can be handled using try-catch blocks, multiple catch blocks, and the throw keyword, among other exception handling mechanisms.
+            */
 
 public class E01 {
 

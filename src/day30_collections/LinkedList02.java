@@ -7,7 +7,7 @@ public class LinkedList02 {
 
     public static void main(String[] args) {
         LinkedList<Integer> ll3 = new LinkedList<>();
-        ll3.add(0, 12);//When I want to use order for the lements, I can place at specific indexes my list elements
+        ll3.add(0, 12);//When I want to use order for the elements, I can place at specific indexes my list elements
         ll3.add(1, 13);
         ll3.add(2, 10);
         ll3.add(3, 11);

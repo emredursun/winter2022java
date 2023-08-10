@@ -9,6 +9,7 @@ public class LinkedHashSet01 {
 
     public static void main(String[] args) {
         LinkedHashSet<Integer> lhs1 = new LinkedHashSet<>();
+
         lhs1.add(12);
         lhs1.add(23);
         lhs1.add(10);
